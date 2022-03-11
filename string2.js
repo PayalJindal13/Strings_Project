@@ -12,6 +12,6 @@ module.exports = function IPAddressToArray(ipv4Address){
             }
         }   
     }
-    //Returning Empty string for invalid address
-    return '';
+    //Returning Empty array for invalid address
+    return [];
 }
