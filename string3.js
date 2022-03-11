@@ -14,5 +14,5 @@ module.exports = function monthOfDate(dateString){
      }
 
     // return undefined for undefined, null, empty string or invalid date
-    return undefined;
+    return 0;
 }
