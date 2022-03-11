@@ -1,7 +1,7 @@
 module.exports = function titleCaseName(nameObj){
 
     // returning titledcase name for a defined name object
-    if (nameObj){
+    if (nameObj && Object.keys(nameObj).length){ // check if it is not null, undefined or empty object
 
         // first name in lowercase 
         let firstName = nameObj['first_name'].toLowerCase();
@@ -19,6 +19,7 @@ module.exports = function titleCaseName(nameObj){
         titledName += lastName.charAt(0).toUpperCase() + lastName.slice(1);
         return titledName;
     }
-    //Returning undefined for a null,undefined or empty object
-    return undefined;
+
+    //Returning empty string for undefined, null cases and empty object input
+    return '';
 }
