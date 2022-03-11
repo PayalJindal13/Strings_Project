@@ -21,5 +21,5 @@ module.exports = function stringToNumber(stringOfNum){
         }
     }
     // Returning undefined if string is null,empty or undefined
-    return undefined;
+    return 0;
 }
