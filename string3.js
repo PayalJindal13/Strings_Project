@@ -7,9 +7,12 @@ module.exports = function monthOfDate(dateString){
         let mm = Number(dateSplit[0]);
         let dd = Number(dateSplit[1]);
         let yy = dateSplit[2];
-
+        date = yy.toString()+'-'+mm.toString()+'-'+dd.toString();
+        
         //check if its a valid date and return month
-        if(!isNaN(Date.parse(yy.toString()+'-'+mm.toString()+'-'+dd.toString()))) return mm;
+        if((new Date(date) !== "Invalid Date") && !isNaN(new Date(date))){
+            return mm;
+        }
         
      }
 
